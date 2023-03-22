@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "c05921e3-4e33-456c-a7ca-348b5ea99f48",
+		"name": "EncryptionApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "617943"
+	},
+	"item": [
+		{
+			"name": "Hash",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}Hash?data=pruebas",
+					"host": [
+						"{{url}}Hash"
+					],
+					"query": [
+						{
+							"key": "data",
+							"value": "pruebas"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AES",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}Encryption?data=pruebas",
+					"host": [
+						"{{url}}Encryption"
+					],
+					"query": [
+						{
+							"key": "data",
+							"value": "pruebas"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RSA",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}Rsa?data=pruebas",
+					"host": [
+						"{{url}}Rsa"
+					],
+					"query": [
+						{
+							"key": "data",
+							"value": "pruebas"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
